@@ -128,8 +128,8 @@ plt.plot(network_prediction,'r', label='Predicted output')
 plt.xlabel('Discrete time steps')
 plt.ylabel('Output')
 plt.legend()
-#plt.savefig('XXXX.png')
-plt.show()
+plt.savefig('prediction_offline.png')
+#plt.show()
 
 ###############################################################################
 #       plot training and validation curves
@@ -147,8 +147,8 @@ plt.ylabel('Loss')
 plt.xscale('log')
 #plt.yscale('log')
 plt.legend()
-#plt.savefig('XXX.png')
-plt.show()
+plt.savefig('loss_curves.png')
+#plt.show()
 ###############################################################################
 #  do prediction on the basis of the past predicted outputs- this is an off-line mode
 ###############################################################################
@@ -178,8 +178,10 @@ plt.plot(Y_predicted_offline, 'r', label='Offline prediction')
 plt.xlabel('Discrete time steps')
 plt.ylabel('Output')
 plt.legend()    
-plt.show()
+plt.savefig('prediction_offline.png')
+#plt.show()
 
+plt.figure()
 #plot the absolute error (offline and online)
 plt.plot(abs(error_offline),'r',label='Offline error')
 plt.plot(abs(error),'b',label='Online error')
@@ -187,7 +189,8 @@ plt.xlabel('Discrete time steps')
 plt.ylabel('Absolute prediction error')
 plt.yscale('log')
 plt.legend()   
-plt.show()
+plt.savefig('errors.png')
+#plt.show()
 
 
 
